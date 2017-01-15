@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_timed_easy"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.androidclass.mepec_000.tiles.Timed_Easy"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:text="Time Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_text"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_keeper"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/time_text"
+        android:layout_marginEnd="15dp" />
+
+    <TextView
+        android:text="Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_text"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_below="@+id/time_text"
+        android:layout_alignParentEnd="true" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tile_grid"
+        android:background="@color/colorPrimaryDark">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/tile_1"
+                android:onClick="handleClick"
+                android:background="@drawable/heavybreathin"
+                android:foregroundTint="?android:attr/colorPressedHighlight"
+                android:visibility="visible"
+                android:cursorVisible="false"
+                android:contextClickable="true" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_2"
+                android:onClick="handleClick"
+                android:background="@drawable/obama"
+                android:visibility="visible" />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:background="@drawable/antijokechicken"
+                android:id="@+id/tile_3"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_4"
+                android:background="@drawable/trollface"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_5"
+                android:background="@drawable/philosoraptor"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_6"
+                android:background="@drawable/dogeone"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_7"
+                android:background="@drawable/whhhyyyy"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:id="@+id/tile_8"
+                android:background="@drawable/badluckbrian"
+                android:onClick="handleClick"
+                android:visibility="visible" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_9"
+            android:background="@drawable/onedoesnotsimply"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_10"
+            android:background="@drawable/dwight"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_11"
+            android:background="@drawable/koala"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_12"
+            android:background="@drawable/successbaby"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_13"
+            android:background="@drawable/yuno"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_14"
+            android:background="@drawable/jadensmith"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_15"
+            android:background="@drawable/grumpycat"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:id="@+id/tile_16"
+            android:background="@drawable/futuramafry"
+            android:onClick="handleClick"
+            android:visibility="visible" />
+    </GridLayout>
+
+    <Button
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:id="@+id/menu_button"
+        android:background="@drawable/hamburger_menu"
+        android:textColor="@android:color/holo_blue_dark"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score_keeper"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:width="74dp"
+        android:layout_below="@+id/time_text"
+        android:layout_alignStart="@+id/time_keeper" />
+
+</RelativeLayout>

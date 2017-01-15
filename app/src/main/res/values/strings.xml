@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tiles</string>
+    <string name="score_keeper">0</string>
+    <string name="time_keeper">30</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.androidclass.mepec_000.tiles.AboutActivity"
+    android:background="@color/colorAccent">
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/back_to_main"
+        android:background="@drawable/back_arrow"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:id="@+id/about_title_text"
+        android:height="70dp"
+        tools:height="70dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="70sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Made by Megan Pecho at UncommonHacks 2017"
+        android:id="@+id/about_info_text"
+        android:height="70dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_marginTop="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_popup_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.androidclass.mepec_000.tiles.PopUpMenu"
+    android:background="@color/colorAccent">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/back_arrow"
+        android:background="@drawable/back_arrow"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quit_button"
+        android:backgroundTint="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:textSize="45sp"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Change Mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/change_mode_button"
+        android:backgroundTint="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:textSize="45sp"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_above="@+id/quit_button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/restart_button"
+        android:backgroundTint="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:textSize="45sp"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginBottom="54dp"
+        android:layout_above="@+id/quit_button"
+        android:layout_alignParentStart="true" />
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/score_keeper"-->
+        <!--android:id="@+id/score_keeper"-->
+        <!--android:height="80dp"-->
+        <!--tools:height="80dp"-->
+        <!--android:fontFamily="sans-serif-smallcaps"-->
+        <!--android:textColor="@android:color/holo_blue_dark"-->
+        <!--android:textSize="80sp"-->
+        <!--android:textStyle="normal"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_marginBottom="71dp"-->
+        <!--android:layout_above="@+id/restart_button"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Score"-->
+        <!--android:id="@+id/score_text"-->
+        <!--android:height="80dp"-->
+        <!--tools:height="80dp"-->
+        <!--android:fontFamily="sans-serif-smallcaps"-->
+        <!--android:textColor="@android:color/holo_blue_dark"-->
+        <!--android:textSize="80sp"-->
+        <!--android:textStyle="normal"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="110dp" />-->
+</RelativeLayout>
