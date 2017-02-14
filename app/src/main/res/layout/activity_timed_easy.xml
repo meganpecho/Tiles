@@ -19,7 +19,7 @@
         android:id="@+id/time_text"
         android:fontFamily="sans-serif-smallcaps"
         android:textSize="25sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorBlue"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/time_keeper"
         android:fontFamily="sans-serif-smallcaps"
         android:textSize="25sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorBlue"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/time_text"
         android:layout_marginEnd="15dp" />
@@ -42,7 +42,7 @@
         android:id="@+id/score_text"
         android:fontFamily="sans-serif-smallcaps"
         android:textSize="25sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorBlue"
         android:layout_below="@+id/time_text"
         android:layout_alignParentEnd="true" />
 
@@ -61,11 +61,10 @@
                 android:layout_height="80dp"
                 android:id="@+id/tile_1"
                 android:onClick="handleClick"
-                android:foregroundTint="?android:attr/colorPressedHighlight"
                 android:visibility="visible"
                 android:cursorVisible="false"
                 android:contextClickable="true"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
             <Button
                 android:layout_width="80dp"
@@ -74,7 +73,7 @@
                 android:id="@+id/tile_2"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -82,7 +81,7 @@
                 android:id="@+id/tile_3"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
             <Button
                 android:layout_width="80dp"
@@ -91,7 +90,7 @@
                 android:id="@+id/tile_4"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
             <Button
                 android:layout_width="80dp"
@@ -100,7 +99,7 @@
                 android:id="@+id/tile_5"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -108,7 +107,7 @@
                 android:id="@+id/tile_6"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
             <Button
                 android:layout_width="80dp"
@@ -117,7 +116,7 @@
                 android:id="@+id/tile_7"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
             <Button
                 android:layout_width="80dp"
@@ -126,7 +125,7 @@
                 android:id="@+id/tile_8"
                 android:onClick="handleClick"
                 android:visibility="visible"
-                android:backgroundTint="@android:color/holo_blue_dark" />
+                android:backgroundTint="@color/tile_color_states" />
 
         <Button
             android:layout_width="80dp"
@@ -135,7 +134,7 @@
             android:id="@+id/tile_9"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -143,7 +142,7 @@
             android:id="@+id/tile_10"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -151,7 +150,7 @@
             android:id="@+id/tile_11"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -159,7 +158,7 @@
             android:id="@+id/tile_12"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -167,7 +166,7 @@
             android:id="@+id/tile_13"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -175,7 +174,7 @@
             android:id="@+id/tile_14"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -183,7 +182,7 @@
             android:id="@+id/tile_15"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:backgroundTint="@color/tile_color_states" />
 
         <Button
             android:layout_width="80dp"
@@ -192,7 +191,8 @@
             android:id="@+id/tile_16"
             android:onClick="handleClick"
             android:visibility="visible"
-            android:backgroundTint="@android:color/holo_blue_dark" />
+            android:state_pressable="false"
+            android:backgroundTint="@color/tile_color_states" /> <!-- pressable false when blue -->
     </GridLayout>
 
     <Button
@@ -200,8 +200,8 @@
         android:layout_height="50dp"
         android:id="@+id/menu_button"
         android:background="@drawable/hamburger_menu"
-        android:textColor="@android:color/holo_blue_dark"
-        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@color/colorBlue"
+        android:backgroundTint="@color/colorBlue"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
@@ -212,7 +212,7 @@
         android:id="@+id/score_keeper"
         android:fontFamily="sans-serif-smallcaps"
         android:textSize="25sp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorBlue"
         android:width="74dp"
         android:layout_below="@+id/time_text"
         android:layout_alignStart="@+id/time_keeper" />

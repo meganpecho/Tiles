@@ -63,7 +63,7 @@ public class Timed_Easy extends AppCompatActivity {
     protected void selectTiles() {
         int[] tileLst = new int[]{R.id.tile_1, R.id.tile_2, R.id.tile_3, R.id.tile_4, R.id.tile_5, R.id.tile_6, R.id.tile_7, R.id.tile_8, R.id.tile_9, R.id.tile_10, R.id.tile_11, R.id.tile_12, R.id.tile_13, R.id.tile_14, R.id.tile_15, R.id.tile_16};
         Random r = new Random();
-        int i1 = r.nextInt(16);
+        int i1 = r.nextInt(1000)%16;
         rand = (Button) findViewById(tileLst[i1]);
         if(rand.getWindowVisibility() <= 0) {
             rand.setVisibility(View.INVISIBLE);
