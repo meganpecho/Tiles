@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.androidclass.mepec_000.tiles.Timed_Easy"
-    android:background="@color/colorAccent">
+    android:background="@color/colorBackground">
 
     <TextView
         android:text="Time Left"
@@ -54,18 +54,18 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/tile_grid"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorBackground">
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/tile_1"
                 android:onClick="handleClick"
-                android:background="@drawable/heavybreathin"
                 android:foregroundTint="?android:attr/colorPressedHighlight"
                 android:visibility="visible"
                 android:cursorVisible="false"
-                android:contextClickable="true" />
+                android:contextClickable="true"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
             <Button
                 android:layout_width="80dp"
@@ -73,126 +73,126 @@
                 android:layout_gravity="start"
                 android:id="@+id/tile_2"
                 android:onClick="handleClick"
-                android:background="@drawable/obama"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
-                android:background="@drawable/antijokechicken"
                 android:id="@+id/tile_3"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_4"
-                android:background="@drawable/trollface"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_5"
-                android:background="@drawable/philosoraptor"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_6"
-                android:background="@drawable/dogeone"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_7"
-                android:background="@drawable/whhhyyyy"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_8"
-                android:background="@drawable/badluckbrian"
                 android:onClick="handleClick"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:backgroundTint="@android:color/holo_blue_dark" />
 
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_9"
-            android:background="@drawable/onedoesnotsimply"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_10"
-            android:background="@drawable/dwight"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_11"
-            android:background="@drawable/koala"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_12"
-            android:background="@drawable/successbaby"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_13"
-            android:background="@drawable/yuno"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_14"
-            android:background="@drawable/jadensmith"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_15"
-            android:background="@drawable/grumpycat"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
 
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="start"
             android:id="@+id/tile_16"
-            android:background="@drawable/futuramafry"
             android:onClick="handleClick"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:backgroundTint="@android:color/holo_blue_dark" />
     </GridLayout>
 
     <Button

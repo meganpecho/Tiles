@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.androidclass.mepec_000.tiles.GameModes"
-    android:background="@color/colorAccent">
+    android:background="@color/colorBackground">
 
     <Button
         android:layout_width="50dp"
@@ -41,7 +41,7 @@
         android:backgroundTint="@android:color/transparent"
         android:background="@android:color/transparent"
         android:textSize="50sp"
-        android:textColor="?android:attr/colorPressedHighlight"
+        android:textColor="@android:color/holo_blue_dark"
         android:fontFamily="sans-serif-smallcaps"
         android:clickable="false"
         android:layout_below="@+id/back_arrow"
@@ -81,7 +81,7 @@
         android:backgroundTint="@android:color/transparent"
         android:background="@android:color/transparent"
         android:textSize="50sp"
-        android:textColor="?android:attr/colorPressedHighlight"
+        android:textColor="@android:color/holo_blue_dark"
         android:fontFamily="sans-serif-smallcaps"
         android:clickable="false"
         android:layout_below="@+id/timed_hard"

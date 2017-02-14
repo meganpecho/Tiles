@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#b6fe6a</color>
-    <color name="colorPrimaryDark">#bbffcc</color>
-    <color name="colorAccent">#fefcfa</color>
+    <color name="colorBackground">#FFFEFCFA</color>
+    <color name="colorBlue">@android:color/holo_blue_dark</color>
+    <color name="colorOrange">?android:attr/colorPressedHighlight</color>
 </resources>

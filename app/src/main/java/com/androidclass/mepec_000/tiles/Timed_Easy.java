@@ -67,6 +67,7 @@ public class Timed_Easy extends AppCompatActivity {
         rand = (Button) findViewById(tileLst[i1]);
         if(rand.getWindowVisibility() <= 0) {
             rand.setVisibility(View.INVISIBLE);
+
         }else {rand.setVisibility(View.VISIBLE);}
     }
 }
