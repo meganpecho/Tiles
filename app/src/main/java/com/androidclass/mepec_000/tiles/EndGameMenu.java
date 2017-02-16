@@ -1,46 +1,41 @@
 package com.androidclass.mepec_000.tiles;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PopUpMenu extends AppCompatActivity {
-    Button GoBackToGame, RestartGame, ChangeMode, QuitToMain;
+public class EndGameMenu extends AppCompatActivity {
+    Button RestartGame, ChangeMode, QuitToMain;
+    TextView sc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popup_menu);
+        setContentView(R.layout.activity_endgame_menu);
 
-        GoBackToGame = (Button)findViewById(R.id.back_arrow);
+
         RestartGame = (Button)findViewById(R.id.restart_button);
         ChangeMode = (Button)findViewById(R.id.change_mode_button);
         QuitToMain = (Button)findViewById(R.id.quit_button);
 
-        GoBackToGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        setScore();
 
         RestartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PopUpMenu.this, Timed_Easy.class);
+                Intent intent = new Intent(EndGameMenu.this, Timed_Easy.class);
                 startActivity(intent);
                 finish();
-
             }
         });
 
         ChangeMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PopUpMenu.this, GameModes.class);
+                Intent intent = new Intent(EndGameMenu.this, GameModes.class);
                 startActivity(intent);
                 finish();
             }
@@ -49,10 +44,17 @@ public class PopUpMenu extends AppCompatActivity {
         QuitToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PopUpMenu.this, MainMenu.class);
+                Intent intent = new Intent(EndGameMenu.this, MainMenu.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
+    protected void setScore() {
+        sc = (TextView)findViewById(R.id.final_score);
+        String s = "";
+        sc.setText(s.format("%d", Timed_Easy.finalScore));
+    }
+
+
 }

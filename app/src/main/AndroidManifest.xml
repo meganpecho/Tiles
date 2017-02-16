@@ -19,7 +19,8 @@
         <activity android:name=".Timed_Easy" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".PopUpMenu"></activity>
+        <activity android:name=".PopUpMenu"/>
+        <activity android:name=".EndGameMenu"></activity>
     </application>
 
 </manifest>

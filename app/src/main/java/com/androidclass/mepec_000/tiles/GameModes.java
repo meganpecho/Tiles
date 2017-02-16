@@ -20,15 +20,18 @@ public class GameModes extends AppCompatActivity {
         GoBackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(GameModes.this, MainMenu.class);
+                startActivity(intent);
+//                finish();
             }
         });
 
         TimedEasy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GameModes.this, Timed_Easy.class);
-                startActivity(intent);
+                Intent resetIntent = new Intent(GameModes.this, Timed_Easy.class);
+                startActivity(resetIntent);
+                finish();
             }
         });
     }
