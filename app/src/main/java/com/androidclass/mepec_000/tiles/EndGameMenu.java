@@ -55,7 +55,6 @@ public class EndGameMenu extends AppCompatActivity {
     protected void setScore() {
         sc = (TextView)findViewById(R.id.final_score);
         String s = "";
-//        same here
         sc.setText(s.format("%d", EndGameMenu.finalScore));
     }
 

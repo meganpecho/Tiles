@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class GameModes extends AppCompatActivity {
-    Button GoBackToMain, TimedEasy, TimedMedium;
+    Button GoBackToMain, TimedEasy, TimedMedium, TimedHard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class GameModes extends AppCompatActivity {
         GoBackToMain = (Button)findViewById(R.id.back_arrow);
         TimedEasy = (Button)findViewById(R.id.timed_easy);
         TimedMedium = (Button)findViewById(R.id.timed_medium);
+        TimedHard = (Button)findViewById(R.id.timed_hard);
 
         GoBackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,15 @@ public class GameModes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent Intent = new Intent(GameModes.this, Timed_Medium.class);
+                startActivity(Intent);
+                finish();
+            }
+        });
+
+        TimedHard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Intent = new Intent(GameModes.this, Timed_Hard.class);
                 startActivity(Intent);
                 finish();
             }
