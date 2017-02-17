@@ -227,6 +227,8 @@ public class Timed_Easy extends AppCompatActivity {
                 selectTiles();
                 selectTiles();
                 selectTiles();
+                selectTiles();
+//                selectTiles();
                 t.setText(timeStr.format("%d", millisUntilFinished / 1000));
 
             }
@@ -246,7 +248,6 @@ public class Timed_Easy extends AppCompatActivity {
         int i1 = r.nextInt(1000)%16;
         rand = (Button) findViewById(tileLst[i1]);
 
-//        while (numTiles > 0) {
         if (rand.isSelected()) {
             rand.setSelected(false);
             rand.setClickable(false);
@@ -255,9 +256,6 @@ public class Timed_Easy extends AppCompatActivity {
             rand.setSelected(true);
             rand.setClickable(true);
         }
-
-//            numTiles--;
-//        }
     }
 //
 //    protected void changeTiles() {
