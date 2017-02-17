@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".GameModes" />
         <activity android:name=".Timed_Easy" />
+        <activity android:name=".Timed_Medium" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".PopUpMenu"/>

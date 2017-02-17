@@ -1,19 +1,21 @@
 package com.androidclass.mepec_000.tiles;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import java.util.Random;
 
 
-public class Timed_Easy extends AppCompatActivity {
+public class Timed_Medium extends AppCompatActivity {
     Button HamburgerMenu, tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8,
                             tile9, tile10, tile11, tile12, tile13, tile14, tile15, tile16;
     int scoreCounter = 0;
+
     TextView sc;
     Button rand;
     Boolean timeLeft;
@@ -21,7 +23,7 @@ public class Timed_Easy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_timed_easy);
+        setContentView(R.layout.activity_timed_medium);
         timeLeft = true;
         rand = (Button) findViewById(R.id.tile_7);
         HamburgerMenu = (Button)findViewById(R.id.menu_button);
@@ -45,7 +47,7 @@ public class Timed_Easy extends AppCompatActivity {
         HamburgerMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Timed_Easy.this, PopUpMenu.class);
+                Intent intent = new Intent(Timed_Medium.this, PopUpMenu.class);
                 startActivity(intent);
             }
         });
@@ -227,14 +229,18 @@ public class Timed_Easy extends AppCompatActivity {
                 selectTiles();
                 selectTiles();
                 selectTiles();
-//                selectTiles();
+                selectTiles();
+                selectTiles();
+                selectTiles();
+                selectTiles();
+                selectTiles();
                 t.setText(timeStr.format("%d", millisUntilFinished / 1000));
 
             }
 
             public void onFinish() {
                 EndGameMenu.finalScore = scoreCounter;
-                Intent intent = new Intent(Timed_Easy.this, EndGameMenu.class);
+                Intent intent = new Intent(Timed_Medium.this, EndGameMenu.class);
                 startActivity(intent);
                 finish();
             }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class EndGameMenu extends AppCompatActivity {
     Button RestartGame, ChangeMode, QuitToMain;
     TextView sc;
+    static int finalScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class EndGameMenu extends AppCompatActivity {
         RestartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                fix this to not just restart easy
                 Intent intent = new Intent(EndGameMenu.this, Timed_Easy.class);
                 startActivity(intent);
                 finish();
@@ -53,7 +55,8 @@ public class EndGameMenu extends AppCompatActivity {
     protected void setScore() {
         sc = (TextView)findViewById(R.id.final_score);
         String s = "";
-        sc.setText(s.format("%d", Timed_Easy.finalScore));
+//        same here
+        sc.setText(s.format("%d", EndGameMenu.finalScore));
     }
 
 
