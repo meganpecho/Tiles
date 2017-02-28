@@ -14,17 +14,66 @@ import java.util.Random;
 public class Timed_Medium extends AppCompatActivity {
     Button HamburgerMenu, tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8,
                             tile9, tile10, tile11, tile12, tile13, tile14, tile15, tile16;
-    int scoreCounter = 0;
-
+    static int scoreCounter;
     TextView sc;
     Button rand;
-    Boolean timeLeft;
+    static long millisLeft;
+    CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timed_medium);
-        timeLeft = true;
+
+        GameModes.current_state = "Timed_Medium";
+        millisLeft = 32000;
+        scoreCounter = 0;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        countDownTimer.cancel();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setContentView(R.layout.activity_timed_medium);
+
+        GameModes.current_state = "Timed_Medium";
+
+        TextView t = (TextView)findViewById(R.id.score_keeper);
+        String timeStr = "";
+        t.setText(timeStr.format("%d", scoreCounter));
+
+
+        if(PopUpMenu.shouldFinish) finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        countDownTimer = new CountDownTimer(millisLeft, 1000) {
+            TextView t = (TextView)findViewById(R.id.time_keeper);
+            public void onTick(long millisUntilFinished) {
+                String timeStr = "";
+                t.setText(timeStr.format("%d", (millisUntilFinished / 1000)-1));
+
+                for (int i = 0; i < 20; i++) {
+                    selectTiles();
+                }
+                millisLeft = millisLeft - 1000;
+            }
+            public void onFinish() {
+                EndGameMenu.finalScore = scoreCounter;
+                Intent intent = new Intent(Timed_Medium.this, EndGameMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        }.start();
+
         rand = (Button) findViewById(R.id.tile_7);
         HamburgerMenu = (Button)findViewById(R.id.menu_button);
         tile1 = (Button)findViewById(R.id.tile_1);
@@ -49,6 +98,7 @@ public class Timed_Medium extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Timed_Medium.this, PopUpMenu.class);
                 startActivity(intent);
+                onPause();
             }
         });
 
@@ -212,39 +262,6 @@ public class Timed_Medium extends AppCompatActivity {
                 }
             }
         });
-
-
-        updateTime();
-
-//        changeTiles();
-    }
-
-    protected void updateTime() {
-        new CountDownTimer(31000, 1000) {
-            TextView t = (TextView)findViewById(R.id.time_keeper);
-            public void onTick(long millisUntilFinished) {
-                String timeStr = "";
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                t.setText(timeStr.format("%d", millisUntilFinished / 1000));
-
-            }
-
-            public void onFinish() {
-                EndGameMenu.finalScore = scoreCounter;
-                Intent intent = new Intent(Timed_Medium.this, EndGameMenu.class);
-                startActivity(intent);
-                finish();
-            }
-        }.start();
     }
 
     protected void selectTiles() {
@@ -262,15 +279,6 @@ public class Timed_Medium extends AppCompatActivity {
             rand.setClickable(true);
         }
     }
-//
-//    protected void changeTiles() {
-//        Random rInt = new Random();
-//        while(timeLeft) {
-//            int numTiles = rInt.nextInt(1000)%6;
-//            selectTiles(numTiles);
-//        }
-//
-//    }
 
     protected void updateScore() {
         scoreCounter++;
@@ -278,14 +286,4 @@ public class Timed_Medium extends AppCompatActivity {
         String s = "";
         sc.setText(s.format("%d",scoreCounter));
     }
-
-//    public void handleClick(View v) {
-//        if (isClickable() && isSelected()) {
-//            rand.setSelected(false);
-//            rand.setClickable(false);
-//            updateScore();
-//        }
-//    }
-
-
 }

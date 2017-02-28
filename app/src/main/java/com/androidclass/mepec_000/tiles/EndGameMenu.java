@@ -27,8 +27,17 @@ public class EndGameMenu extends AppCompatActivity {
         RestartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                fix this to not just restart easy
-                Intent intent = new Intent(EndGameMenu.this, Timed_Easy.class);
+                Intent intent;
+                if (GameModes.current_state.equals("Timed_Easy")) {
+                    intent = new Intent(EndGameMenu.this, Timed_Easy.class);
+                    finishActivity(0);
+                } else if (GameModes.current_state.equals("Timed_Medium")) {
+                    intent = new Intent(EndGameMenu.this, Timed_Medium.class);
+                    finishActivity(1);
+                } else /*if (GameModes.current_state.equals("Timed_Hard"))*/ {
+                    intent = new Intent(EndGameMenu.this, Timed_Hard.class);
+                    finishActivity(2);
+                }
                 startActivity(intent);
                 finish();
             }
@@ -37,6 +46,10 @@ public class EndGameMenu extends AppCompatActivity {
         ChangeMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (GameModes.current_state.equals("Timed_Easy")) finishActivity(0);
+                else if (GameModes.current_state.equals("Timed_Medium")) finishActivity(1);
+                else /*if (GameModes.current_state.equals("Timed_Hard"))*/ finishActivity(2);
+
                 Intent intent = new Intent(EndGameMenu.this, GameModes.class);
                 startActivity(intent);
                 finish();
@@ -46,6 +59,9 @@ public class EndGameMenu extends AppCompatActivity {
         QuitToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (GameModes.current_state.equals("Timed_Easy")) finishActivity(0);
+                else if (GameModes.current_state.equals("Timed_Medium")) finishActivity(1);
+                else /*if (GameModes.current_state.equals("Timed_Hard"))*/ finishActivity(2);
                 Intent intent = new Intent(EndGameMenu.this, MainMenu.class);
                 startActivity(intent);
                 finish();

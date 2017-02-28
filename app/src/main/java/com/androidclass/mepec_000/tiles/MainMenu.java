@@ -22,8 +22,7 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this, GameModes.class);
-                startActivity(intent);
-//                finish();
+                startActivityForResult(intent, 3);
             }
         });
 
@@ -32,7 +31,6 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this, SettingsActivity.class);
                 startActivity(intent);
-//                finish();
             }
         });
 
@@ -41,7 +39,6 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this, AboutActivity.class);
                 startActivity(intent);
-//                finish();
             }
         });
     }

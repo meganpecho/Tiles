@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.PopupMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -14,17 +16,66 @@ import java.util.Random;
 public class Timed_Hard extends AppCompatActivity {
     Button HamburgerMenu, tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8,
                             tile9, tile10, tile11, tile12, tile13, tile14, tile15, tile16;
-    int scoreCounter = 0;
-
+    static int scoreCounter;
     TextView sc;
     Button rand;
-    Boolean timeLeft;
+    static long millisLeft;
+    CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timed_hard);
-        timeLeft = true;
+
+        GameModes.current_state = "Timed_Hard";
+        millisLeft = 31000;
+        scoreCounter = 0;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        countDownTimer.cancel();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setContentView(R.layout.activity_timed_hard);
+
+        GameModes.current_state = "Timed_Hard";
+
+        TextView t = (TextView)findViewById(R.id.score_keeper);
+        String timeStr = "";
+        t.setText(timeStr.format("%d", scoreCounter));
+
+
+        if(PopUpMenu.shouldFinish) finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        countDownTimer = new CountDownTimer(millisLeft, 500) {
+            TextView t = (TextView)findViewById(R.id.time_keeper);
+            public void onTick(long millisUntilFinished) {
+                String timeStr = "";
+                t.setText(timeStr.format("%d", (millisUntilFinished / 1000)));
+
+                for (int i = 0; i < 10; i++) {
+                    selectTiles();
+                }
+                millisLeft = millisLeft - 500;
+            }
+            public void onFinish() {
+                EndGameMenu.finalScore = scoreCounter;
+                Intent intent = new Intent(Timed_Hard.this, EndGameMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        }.start();
+
         rand = (Button) findViewById(R.id.tile_7);
         HamburgerMenu = (Button)findViewById(R.id.menu_button);
         tile1 = (Button)findViewById(R.id.tile_1);
@@ -49,6 +100,7 @@ public class Timed_Hard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Timed_Hard.this, PopUpMenu.class);
                 startActivity(intent);
+                onPause();
             }
         });
 
@@ -212,45 +264,6 @@ public class Timed_Hard extends AppCompatActivity {
                 }
             }
         });
-
-
-        updateTime();
-
-//        changeTiles();
-    }
-
-    protected void updateTime() {
-        new CountDownTimer(31000, 1000) {
-            TextView t = (TextView)findViewById(R.id.time_keeper);
-            public void onTick(long millisUntilFinished) {
-                String timeStr = "";
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                selectTiles();
-                t.setText(timeStr.format("%d", millisUntilFinished / 1000));
-
-            }
-
-            public void onFinish() {
-                EndGameMenu.finalScore = scoreCounter;
-                Intent intent = new Intent(Timed_Hard.this, EndGameMenu.class);
-                startActivity(intent);
-                finish();
-            }
-        }.start();
     }
 
     protected void selectTiles() {
@@ -268,30 +281,11 @@ public class Timed_Hard extends AppCompatActivity {
             rand.setClickable(true);
         }
     }
-//
-//    protected void changeTiles() {
-//        Random rInt = new Random();
-//        while(timeLeft) {
-//            int numTiles = rInt.nextInt(1000)%6;
-//            selectTiles(numTiles);
-//        }
-//
-//    }
 
     protected void updateScore() {
         scoreCounter++;
-        sc = (TextView)findViewById(R.id.score_keeper);
+        sc = (TextView) findViewById(R.id.score_keeper);
         String s = "";
-        sc.setText(s.format("%d",scoreCounter));
+        sc.setText(s.format("%d", scoreCounter));
     }
-
-//    public void handleClick(View v) {
-//        if (isClickable() && isSelected()) {
-//            rand.setSelected(false);
-//            rand.setClickable(false);
-//            updateScore();
-//        }
-//    }
-
-
 }

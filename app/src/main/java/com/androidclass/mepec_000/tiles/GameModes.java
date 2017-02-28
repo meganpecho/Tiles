@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class GameModes extends AppCompatActivity {
     Button GoBackToMain, TimedEasy, TimedMedium, TimedHard;
-
+    static String current_state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +22,7 @@ public class GameModes extends AppCompatActivity {
         GoBackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GameModes.this, MainMenu.class);
-                startActivity(intent);
-//                finish();
+                finish();
             }
         });
 
@@ -32,7 +30,8 @@ public class GameModes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent Intent = new Intent(GameModes.this, Timed_Easy.class);
-                startActivity(Intent);
+                startActivityForResult(Intent, 0); //Timed_Easy
+                finishActivity(3); //MainMenu
                 finish();
             }
         });
@@ -41,7 +40,8 @@ public class GameModes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent Intent = new Intent(GameModes.this, Timed_Medium.class);
-                startActivity(Intent);
+                startActivityForResult(Intent, 1); //Timed_Medium
+                finishActivity(3); //MainMenu
                 finish();
             }
         });
@@ -50,7 +50,8 @@ public class GameModes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent Intent = new Intent(GameModes.this, Timed_Hard.class);
-                startActivity(Intent);
+                startActivityForResult(Intent, 2); //Timed_Hard
+                finishActivity(3); //MainMenu
                 finish();
             }
         });

@@ -37,8 +37,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Made by Megan Pecho
- Updated 2/3/2017"
+        android:text="version 1.0.0"
         android:id="@+id/about_info_text"
         android:height="70dp"
         android:fontFamily="sans-serif-smallcaps"
