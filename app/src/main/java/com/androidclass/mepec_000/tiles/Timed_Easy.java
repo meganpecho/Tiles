@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -60,7 +61,7 @@ public class Timed_Easy extends AppCompatActivity {
                 String timeStr = "";
                 t.setText(timeStr.format("%d", (millisUntilFinished / 1000)-1));
 
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 11; i++) {
                     selectTiles();
                 }
                 millisLeft = millisLeft - 1000;
@@ -104,9 +105,9 @@ public class Timed_Easy extends AppCompatActivity {
         tile1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                v.playSoundEffect(SoundEffectConstants.CLICK);
                 if (tile1.isClickable() && tile1.isSelected()) {
                     tile1.setSelected(false);
-                    tile1.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -117,7 +118,6 @@ public class Timed_Easy extends AppCompatActivity {
             public void onClick(View v) {
                 if (tile2.isClickable() && tile2.isSelected()) {
                     tile2.setSelected(false);
-                    tile2.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -126,9 +126,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile3.isClickable() && tile3.isSelected()) {
+                if (tile3.isSelected()) {
                     tile3.setSelected(false);
-                    tile3.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -137,9 +136,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile4.isClickable() && tile4.isSelected()) {
+                if (tile4.isSelected()) {
                     tile4.setSelected(false);
-                    tile4.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -148,19 +146,18 @@ public class Timed_Easy extends AppCompatActivity {
         tile5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile5.isClickable() && tile5.isSelected()) {
+                if (tile5.isSelected()) {
                     tile5.setSelected(false);
-                    tile5.setClickable(false);
                     addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile6.isClickable() && tile6.isSelected()) {
+                if (tile6.isSelected()) {
                     tile6.setSelected(false);
-                    tile6.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -169,19 +166,18 @@ public class Timed_Easy extends AppCompatActivity {
         tile7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile7.isClickable() && tile7.isSelected()) {
+                if (tile7.isSelected()) {
                     tile7.setSelected(false);
-                    tile7.setClickable(false);
                     addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile8.isClickable() && tile8.isSelected()) {
+                if (tile8.isSelected()) {
                     tile8.setSelected(false);
-                    tile8.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -190,9 +186,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile9.isClickable() && tile9.isSelected()) {
+                if (tile9.isSelected()) {
                     tile9.setSelected(false);
-                    tile9.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -201,9 +196,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile10.isClickable() && tile10.isSelected()) {
+                if (tile10.isSelected()) {
                     tile10.setSelected(false);
-                    tile10.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -212,9 +206,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile11.isClickable() && tile11.isSelected()) {
+                if (tile11.isSelected()) {
                     tile11.setSelected(false);
-                    tile11.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -223,9 +216,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile12.isClickable() && tile12.isSelected()) {
+                if (tile12.isSelected()) {
                     tile12.setSelected(false);
-                    tile12.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -234,9 +226,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile13.isClickable() && tile13.isSelected()) {
+                if (tile13.isSelected()) {
                     tile13.setSelected(false);
-                    tile13.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -245,19 +236,18 @@ public class Timed_Easy extends AppCompatActivity {
         tile14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile14.isClickable() && tile14.isSelected()) {
+                if (tile14.isSelected()) {
                     tile14.setSelected(false);
-                    tile14.setClickable(false);
                     addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile15.isClickable() && tile15.isSelected()) {
+                if (tile15.isSelected()) {
                     tile15.setSelected(false);
-                    tile15.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -266,9 +256,8 @@ public class Timed_Easy extends AppCompatActivity {
         tile16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile16.isClickable() && tile16.isSelected()) {
+                if (tile16.isSelected()) {
                     tile16.setSelected(false);
-                    tile16.setClickable(false);
                     addPoint();
                 }
                 else subtractPoint();
@@ -284,11 +273,9 @@ public class Timed_Easy extends AppCompatActivity {
 
         if (rand.isSelected()) {
             rand.setSelected(false);
-            rand.setClickable(false);
         }
         else {
             rand.setSelected(true);
-            rand.setClickable(true);
         }
     }
 

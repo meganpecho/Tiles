@@ -60,16 +60,16 @@ public class Timed_Extreme extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        countDownTimer = new CountDownTimer(millisLeft, 500) {
+        countDownTimer = new CountDownTimer(millisLeft, 1000) {
             TextView t = (TextView)findViewById(R.id.time_keeper);
             public void onTick(long millisUntilFinished) {
                 String timeStr = "";
                 t.setText(timeStr.format("%d", (millisUntilFinished / 1000)));
 
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 20; i++) {
                     selectTiles();
                 }
-                millisLeft = millisLeft - 500;
+                millisLeft = millisLeft - 1000;
             }
             public void onFinish() {
                 EndGameMenu.finalScore = scoreCounter;
@@ -130,361 +130,326 @@ public class Timed_Extreme extends AppCompatActivity {
         tile1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile1.isClickable() && tile1.isSelected()) {
+                if (tile1.isSelected()) {
                     tile1.setSelected(false);
-                    tile1.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile2.isClickable() && tile2.isSelected()) {
+                if (tile2.isSelected()) {
                     tile2.setSelected(false);
-                    tile2.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
+
             }
         });
         tile3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile3.isClickable() && tile3.isSelected()) {
+                if (tile3.isSelected()) {
                     tile3.setSelected(false);
-                    tile3.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile4.isClickable() && tile4.isSelected()) {
+                if (tile4.isSelected()) {
                     tile4.setSelected(false);
-                    tile4.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile5.isClickable() && tile5.isSelected()) {
+                if (tile5.isSelected()) {
                     tile5.setSelected(false);
-                    tile5.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile6.isClickable() && tile6.isSelected()) {
+                if (tile6.isSelected()) {
                     tile6.setSelected(false);
-                    tile6.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile7.isClickable() && tile7.isSelected()) {
+                if (tile7.isSelected()) {
                     tile7.setSelected(false);
-                    tile7.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile8.isClickable() && tile8.isSelected()) {
+                if (tile8.isSelected()) {
                     tile8.setSelected(false);
-                    tile8.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile9.isClickable() && tile9.isSelected()) {
+                if (tile9.isSelected()) {
                     tile9.setSelected(false);
-                    tile9.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile10.isClickable() && tile10.isSelected()) {
+                if (tile10.isSelected()) {
                     tile10.setSelected(false);
-                    tile10.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile11.isClickable() && tile11.isSelected()) {
+                if (tile11.isSelected()) {
                     tile11.setSelected(false);
-                    tile11.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile12.isClickable() && tile12.isSelected()) {
+                if (tile12.isSelected()) {
                     tile12.setSelected(false);
-                    tile12.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile13.isClickable() && tile13.isSelected()) {
+                if (tile13.isSelected()) {
                     tile13.setSelected(false);
-                    tile13.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile14.isClickable() && tile14.isSelected()) {
+                if (tile14.isSelected()) {
                     tile14.setSelected(false);
-                    tile14.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile15.isClickable() && tile15.isSelected()) {
+                if (tile15.isSelected()) {
                     tile15.setSelected(false);
-                    tile15.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile16.isClickable() && tile16.isSelected()) {
+                if (tile16.isSelected()) {
                     tile16.setSelected(false);
-                    tile16.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile17.isClickable() && tile16.isSelected()) {
+                if (tile17.isSelected()) {
                     tile17.setSelected(false);
-                    tile17.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile18.isClickable() && tile16.isSelected()) {
+                if (tile18.isSelected()) {
                     tile18.setSelected(false);
-                    tile18.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile19.isClickable() && tile16.isSelected()) {
+                if (tile19.isSelected()) {
                     tile19.setSelected(false);
-                    tile19.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile20.isClickable() && tile16.isSelected()) {
+                if (tile20.isSelected()) {
                     tile20.setSelected(false);
-                    tile20.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile21.isClickable() && tile16.isSelected()) {
+                if (tile21.isSelected()) {
                     tile21.setSelected(false);
-                    tile21.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile22.isClickable() && tile16.isSelected()) {
+                if (tile22.isSelected()) {
                     tile22.setSelected(false);
-                    tile22.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile23.isClickable() && tile16.isSelected()) {
+                if (tile23.isSelected()) {
                     tile23.setSelected(false);
-                    tile23.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile24.isClickable() && tile16.isSelected()) {
+                if (tile24.isSelected()) {
                     tile24.setSelected(false);
-                    tile24.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile25.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile25.isClickable() && tile16.isSelected()) {
+                if (tile25.isSelected()) {
                     tile25.setSelected(false);
-                    tile25.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile26.isClickable() && tile16.isSelected()) {
+                if (tile26.isSelected()) {
                     tile26.setSelected(false);
-                    tile26.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile27.isClickable() && tile16.isSelected()) {
+                if (tile27.isSelected()) {
                     tile27.setSelected(false);
-                    tile27.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile28.isClickable() && tile16.isSelected()) {
+                if (tile28.isSelected()) {
                     tile28.setSelected(false);
-                    tile28.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
             }
         });
         tile29.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile29.isClickable() && tile16.isSelected()) {
+                if (tile29.isSelected()) {
                     tile29.setSelected(false);
-                    tile29.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile30.isClickable() && tile16.isSelected()) {
+                if (tile30.isSelected()) {
                     tile30.setSelected(false);
-                    tile30.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile31.isClickable() && tile16.isSelected()) {
+                if (tile31.isSelected()) {
                     tile31.setSelected(false);
-                    tile31.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile32.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile32.isClickable() && tile16.isSelected()) {
+                if (tile32.isSelected()) {
                     tile32.setSelected(false);
-                    tile32.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile33.isClickable() && tile16.isSelected()) {
+                if (tile33.isSelected()) {
                     tile33.setSelected(false);
-                    tile33.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile34.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile34.isClickable() && tile16.isSelected()) {
+                if (tile34.isSelected()) {
                     tile34.setSelected(false);
-                    tile34.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile35.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile35.isClickable() && tile16.isSelected()) {
+                if (tile35.isSelected()) {
                     tile35.setSelected(false);
-                    tile35.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
         tile36.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile36.isClickable() && tile16.isSelected()) {
+                if (tile36.isSelected()) {
                     tile36.setSelected(false);
-                    tile36.setClickable(false);
-                    updateScore();
-                }
+                    addPoint();
+                } else subtractPoint();
             }
         });
 
@@ -497,21 +462,25 @@ public class Timed_Extreme extends AppCompatActivity {
                 R.id.tile_24, R.id.tile_25, R.id.tile_26, R.id.tile_27, R.id.tile_28, R.id.tile_29, R.id.tile_30, R.id.tile_31,
                 R.id.tile_32, R.id.tile_33, R.id.tile_34, R.id.tile_35, R.id.tile_36};
         Random r = new Random();
-        int i1 = r.nextInt(1000)%36;
+        int i1 = r.nextInt(10000)%36;
         rand = (Button) findViewById(tileLst[i1]);
 
         if (rand.isSelected()) {
             rand.setSelected(false);
-            rand.setClickable(false);
         }
         else {
             rand.setSelected(true);
-            rand.setClickable(true);
         }
     }
-
-    protected void updateScore() {
+    protected void addPoint() {
         scoreCounter++;
+        sc = (TextView)findViewById(R.id.score_keeper);
+        String s = "";
+        sc.setText(s.format("%d",scoreCounter));
+    }
+
+    protected void subtractPoint() {
+        scoreCounter--;
         sc = (TextView) findViewById(R.id.score_keeper);
         String s = "";
         sc.setText(s.format("%d", scoreCounter));

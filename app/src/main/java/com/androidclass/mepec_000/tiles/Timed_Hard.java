@@ -109,9 +109,9 @@ public class Timed_Hard extends AppCompatActivity {
             public void onClick(View v) {
                 if (tile1.isClickable() && tile1.isSelected()) {
                     tile1.setSelected(false);
-                    tile1.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile2.setOnClickListener(new View.OnClickListener() {
@@ -119,149 +119,149 @@ public class Timed_Hard extends AppCompatActivity {
             public void onClick(View v) {
                 if (tile2.isClickable() && tile2.isSelected()) {
                     tile2.setSelected(false);
-                    tile2.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile3.isClickable() && tile3.isSelected()) {
+                if (tile3.isSelected()) {
                     tile3.setSelected(false);
-                    tile3.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile4.isClickable() && tile4.isSelected()) {
+                if (tile4.isSelected()) {
                     tile4.setSelected(false);
-                    tile4.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile5.isClickable() && tile5.isSelected()) {
+                if (tile5.isSelected()) {
                     tile5.setSelected(false);
-                    tile5.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile6.isClickable() && tile6.isSelected()) {
+                if (tile6.isSelected()) {
                     tile6.setSelected(false);
-                    tile6.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile7.isClickable() && tile7.isSelected()) {
+                if (tile7.isSelected()) {
                     tile7.setSelected(false);
-                    tile7.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile8.isClickable() && tile8.isSelected()) {
+                if (tile8.isSelected()) {
                     tile8.setSelected(false);
-                    tile8.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile9.isClickable() && tile9.isSelected()) {
+                if (tile9.isSelected()) {
                     tile9.setSelected(false);
-                    tile9.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile10.isClickable() && tile10.isSelected()) {
+                if (tile10.isSelected()) {
                     tile10.setSelected(false);
-                    tile10.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile11.isClickable() && tile11.isSelected()) {
+                if (tile11.isSelected()) {
                     tile11.setSelected(false);
-                    tile11.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile12.isClickable() && tile12.isSelected()) {
+                if (tile12.isSelected()) {
                     tile12.setSelected(false);
-                    tile12.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile13.isClickable() && tile13.isSelected()) {
+                if (tile13.isSelected()) {
                     tile13.setSelected(false);
-                    tile13.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile14.isClickable() && tile14.isSelected()) {
+                if (tile14.isSelected()) {
                     tile14.setSelected(false);
-                    tile14.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile15.isClickable() && tile15.isSelected()) {
+                if (tile15.isSelected()) {
                     tile15.setSelected(false);
-                    tile15.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tile16.isClickable() && tile16.isSelected()) {
+                if (tile16.isSelected()) {
                     tile16.setSelected(false);
-                    tile16.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
     }
@@ -274,18 +274,23 @@ public class Timed_Hard extends AppCompatActivity {
 
         if (rand.isSelected()) {
             rand.setSelected(false);
-            rand.setClickable(false);
         }
         else {
             rand.setSelected(true);
-            rand.setClickable(true);
         }
     }
 
-    protected void updateScore() {
+    protected void addPoint() {
         scoreCounter++;
-        sc = (TextView) findViewById(R.id.score_keeper);
+        sc = (TextView)findViewById(R.id.score_keeper);
         String s = "";
-        sc.setText(s.format("%d", scoreCounter));
+        sc.setText(s.format("%d",scoreCounter));
+    }
+
+    protected void subtractPoint() {
+        scoreCounter--;
+        sc = (TextView)findViewById(R.id.score_keeper);
+        String s = "";
+        sc.setText(s.format("%d",scoreCounter));
     }
 }

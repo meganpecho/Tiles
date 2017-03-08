@@ -55,33 +55,34 @@
         android:id="@+id/tile_grid"
         android:background="@color/colorBackground">
 
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="start"
-                android:id="@+id/tile_1"
-                android:state_selected="@color/tile_color_states"
-                android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
-                android:backgroundTint="@color/tile_color_states" />
+        <Button
+            android:id="@+id/tile_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start"
+            android:backgroundTint="@color/tile_color_states"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:state_pressed="@color/tile_color_states"
+            android:state_selected="false" />
 
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_2"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_3"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
 
             <Button
@@ -89,9 +90,9 @@
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_4"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
 
             <Button
@@ -101,16 +102,16 @@
                 android:id="@+id/tile_5"
                 android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_6"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
 
             <Button
@@ -118,9 +119,9 @@
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_7"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
 
             <Button
@@ -128,9 +129,9 @@
                 android:layout_height="80dp"
                 android:layout_gravity="start"
                 android:id="@+id/tile_8"
-                android:state_selected="@color/tile_color_states"
+                android:state_selected="false"
                 android:state_pressed="@color/tile_color_states"
-                android:clickable="false"
+                android:clickable="true"
                 android:backgroundTint="@color/tile_color_states" />
 
         <Button
@@ -140,7 +141,7 @@
             android:id="@+id/tile_9"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -149,7 +150,7 @@
             android:id="@+id/tile_10"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -158,7 +159,7 @@
             android:id="@+id/tile_11"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -167,7 +168,7 @@
             android:id="@+id/tile_12"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -176,7 +177,7 @@
             android:id="@+id/tile_13"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -185,7 +186,7 @@
             android:id="@+id/tile_14"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
         <Button
             android:layout_width="80dp"
@@ -194,7 +195,7 @@
             android:id="@+id/tile_15"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
 
         <Button
@@ -204,7 +205,7 @@
             android:id="@+id/tile_16"
             android:state_selected="false"
             android:state_pressed="@color/tile_color_states"
-            android:clickable="false"
+            android:clickable="true"
             android:backgroundTint="@color/tile_color_states" />
     </GridLayout>
 

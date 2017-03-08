@@ -2,6 +2,7 @@ package com.androidclass.mepec_000.tiles;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class EndGameMenu extends AppCompatActivity {
         QuitToMain = (Button)findViewById(R.id.quit_button);
 
         setScore();
+        showButtons();
 
         RestartGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,11 +70,27 @@ public class EndGameMenu extends AppCompatActivity {
             }
         });
     }
+
+
     protected void setScore() {
         sc = (TextView)findViewById(R.id.final_score);
         String s = "";
         sc.setText(s.format("%d", EndGameMenu.finalScore));
     }
 
+    private Handler handler;
+
+    private void showButtons(){
+        handler = new Handler();
+
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                QuitToMain.setVisibility(View.VISIBLE);
+                RestartGame.setVisibility(View.VISIBLE);
+                ChangeMode.setVisibility(View.VISIBLE);
+            }
+        }, 2000);
+    }
 
 }

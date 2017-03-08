@@ -55,7 +55,8 @@
         android:fontFamily="sans-serif-smallcaps"
         android:layout_marginBottom="42dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
 
     <Button
         android:text="Change Mode"
@@ -68,7 +69,8 @@
         android:textColor="@color/colorOrange"
         android:fontFamily="sans-serif-smallcaps"
         android:layout_above="@+id/quit_button"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
 
     <Button
         android:text="Restart"
@@ -82,5 +84,6 @@
         android:fontFamily="sans-serif-smallcaps"
         android:layout_marginBottom="54dp"
         android:layout_above="@+id/quit_button"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
 </RelativeLayout>
