@@ -2,5 +2,5 @@
 <resources>
     <color name="colorBackground">#fcfaf8</color>
     <color name="colorBlue">#0099cc</color>
-    <color name="colorOrange">#FF8800</color>
+    <color name="colorOrange">#ff8800</color>
 </resources>

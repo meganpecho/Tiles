@@ -107,8 +107,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile1.isClickable() && tile1.isSelected()) {
                     tile1.setSelected(false);
                     tile1.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile2.setOnClickListener(new View.OnClickListener() {
@@ -117,8 +118,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile2.isClickable() && tile2.isSelected()) {
                     tile2.setSelected(false);
                     tile2.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile3.setOnClickListener(new View.OnClickListener() {
@@ -127,8 +129,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile3.isClickable() && tile3.isSelected()) {
                     tile3.setSelected(false);
                     tile3.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile4.setOnClickListener(new View.OnClickListener() {
@@ -137,8 +140,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile4.isClickable() && tile4.isSelected()) {
                     tile4.setSelected(false);
                     tile4.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile5.setOnClickListener(new View.OnClickListener() {
@@ -147,7 +151,7 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile5.isClickable() && tile5.isSelected()) {
                     tile5.setSelected(false);
                     tile5.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
             }
         });
@@ -157,8 +161,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile6.isClickable() && tile6.isSelected()) {
                     tile6.setSelected(false);
                     tile6.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile7.setOnClickListener(new View.OnClickListener() {
@@ -167,7 +172,7 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile7.isClickable() && tile7.isSelected()) {
                     tile7.setSelected(false);
                     tile7.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
             }
         });
@@ -177,8 +182,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile8.isClickable() && tile8.isSelected()) {
                     tile8.setSelected(false);
                     tile8.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile9.setOnClickListener(new View.OnClickListener() {
@@ -187,8 +193,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile9.isClickable() && tile9.isSelected()) {
                     tile9.setSelected(false);
                     tile9.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile10.setOnClickListener(new View.OnClickListener() {
@@ -197,8 +204,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile10.isClickable() && tile10.isSelected()) {
                     tile10.setSelected(false);
                     tile10.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile11.setOnClickListener(new View.OnClickListener() {
@@ -207,8 +215,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile11.isClickable() && tile11.isSelected()) {
                     tile11.setSelected(false);
                     tile11.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile12.setOnClickListener(new View.OnClickListener() {
@@ -217,8 +226,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile12.isClickable() && tile12.isSelected()) {
                     tile12.setSelected(false);
                     tile12.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile13.setOnClickListener(new View.OnClickListener() {
@@ -227,8 +237,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile13.isClickable() && tile13.isSelected()) {
                     tile13.setSelected(false);
                     tile13.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile14.setOnClickListener(new View.OnClickListener() {
@@ -237,7 +248,7 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile14.isClickable() && tile14.isSelected()) {
                     tile14.setSelected(false);
                     tile14.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
             }
         });
@@ -247,8 +258,9 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile15.isClickable() && tile15.isSelected()) {
                     tile15.setSelected(false);
                     tile15.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
         tile16.setOnClickListener(new View.OnClickListener() {
@@ -257,12 +269,11 @@ public class Timed_Easy extends AppCompatActivity {
                 if (tile16.isClickable() && tile16.isSelected()) {
                     tile16.setSelected(false);
                     tile16.setClickable(false);
-                    updateScore();
+                    addPoint();
                 }
+                else subtractPoint();
             }
         });
-
-//        countDownTimer.start();
     }
 
     protected void selectTiles() {
@@ -281,8 +292,15 @@ public class Timed_Easy extends AppCompatActivity {
         }
     }
 
-    protected void updateScore() {
+    protected void addPoint() {
         scoreCounter++;
+        sc = (TextView)findViewById(R.id.score_keeper);
+        String s = "";
+        sc.setText(s.format("%d",scoreCounter));
+    }
+
+    protected void subtractPoint() {
+        scoreCounter--;
         sc = (TextView)findViewById(R.id.score_keeper);
         String s = "";
         sc.setText(s.format("%d",scoreCounter));

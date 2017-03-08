@@ -47,6 +47,8 @@ public class PopUpMenu extends AppCompatActivity {
                 Timed_Medium.scoreCounter = 0;
                 Timed_Hard.millisLeft = 31000;
                 Timed_Hard.scoreCounter = 0;
+                Timed_Extreme.millisLeft = 31000;
+                Timed_Extreme.scoreCounter = 0;
 //                startActivity(intent);
                 finish();
 
@@ -58,7 +60,8 @@ public class PopUpMenu extends AppCompatActivity {
             public void onClick(View v) {
                 if (GameModes.current_state.equals("Timed_Easy")) finishActivity(0);
                 else if (GameModes.current_state.equals("Timed_Medium")) finishActivity(1);
-                else /*if (GameModes.current_state.equals("Timed_Hard"))*/ finishActivity(2);
+                else if (GameModes.current_state.equals("Timed_Hard")) finishActivity(2);
+                else /*if (GameModes.current_state.equals("Timed_Extreme"))*/ finishActivity(4);
 
                 shouldFinish = true;
                 Intent intent = new Intent(PopUpMenu.this, GameModes.class);
@@ -72,7 +75,8 @@ public class PopUpMenu extends AppCompatActivity {
             public void onClick(View v) {
                 if (GameModes.current_state.equals("Timed_Easy")) finishActivity(0);
                 else if (GameModes.current_state.equals("Timed_Medium")) finishActivity(1);
-                else /*if (GameModes.current_state.equals("Timed_Hard"))*/ finishActivity(2);
+                else if (GameModes.current_state.equals("Timed_Hard")) finishActivity(2);
+                else /*if (GameModes.current_state.equals("Timed_Extreme"))*/ finishActivity(4);
 
                 shouldFinish = true;
                 Intent intent = new Intent(PopUpMenu.this, MainMenu.class);

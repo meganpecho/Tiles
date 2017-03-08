@@ -35,9 +35,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="No settings to change yet!"
+        android:text="Clicks"
         android:id="@+id/settings_info_text"
         android:height="35dp"
         tools:height="70dp"
@@ -46,8 +46,23 @@
         android:textSize="20sp"
         android:textStyle="normal"
         android:textAlignment="center"
-        android:layout_marginTop="180dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/settings_title_text"
+        android:layout_toEndOf="@+id/back_arrow" />
+
+    <Switch
+        android:id="@+id/clicks_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:checked="true"
+        android:switchMinWidth="30dp"
+        android:textOff="Off"
+        android:textOn="On"
+        android:trackTint="@color/colorOrange"
+        android:layout_alignBaseline="@+id/settings_info_text"
+        android:layout_alignBottom="@+id/settings_info_text"
+        android:layout_toEndOf="@+id/settings_info_text" />
+
 
 </RelativeLayout>

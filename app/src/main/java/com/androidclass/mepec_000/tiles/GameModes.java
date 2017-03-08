@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class GameModes extends AppCompatActivity {
-    Button GoBackToMain, TimedEasy, TimedMedium, TimedHard;
+    Button GoBackToMain, TimedEasy, TimedMedium, TimedHard, TimedExtreme;
     static String current_state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class GameModes extends AppCompatActivity {
         TimedEasy = (Button)findViewById(R.id.timed_easy);
         TimedMedium = (Button)findViewById(R.id.timed_medium);
         TimedHard = (Button)findViewById(R.id.timed_hard);
-
+        TimedExtreme = (Button)findViewById(R.id.timed_extreme);
         GoBackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +51,16 @@ public class GameModes extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Intent = new Intent(GameModes.this, Timed_Hard.class);
                 startActivityForResult(Intent, 2); //Timed_Hard
+                finishActivity(3); //MainMenu
+                finish();
+            }
+        });
+
+        TimedExtreme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Intent = new Intent(GameModes.this, Timed_Extreme.class);
+                startActivityForResult(Intent, 4); //Timed_Extreme
                 finishActivity(3); //MainMenu
                 finish();
             }
