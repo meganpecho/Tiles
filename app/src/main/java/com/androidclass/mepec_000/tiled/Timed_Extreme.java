@@ -1,14 +1,14 @@
-package com.androidclass.mepec_000.tiles;
+package com.androidclass.mepec_000.tiled;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.PopupMenu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.androidclass.mepec_000.tiles.R;
 
 import java.util.Random;
 

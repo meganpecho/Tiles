@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.androidclass.mepec_000.tiles.Timed_Easy"
+    tools:context="com.androidclass.mepec_000.tiled.Timed_Easy"
     android:background="@color/colorBackground">
 
     <TextView

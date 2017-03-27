@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainMenu"
+            android:name="com.androidclass.mepec_000.tiled.MainMenu"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,31 +18,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GameModes"
+            android:name="com.androidclass.mepec_000.tiled.GameModes"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Timed_Easy"
+            android:name="com.androidclass.mepec_000.tiled.Timed_Easy"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Timed_Medium"
+            android:name="com.androidclass.mepec_000.tiled.Timed_Medium"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Timed_Hard"
+            android:name="com.androidclass.mepec_000.tiled.Timed_Hard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.androidclass.mepec_000.tiled.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AboutActivity"
+            android:name="com.androidclass.mepec_000.tiled.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PopUpMenu"
+            android:name="com.androidclass.mepec_000.tiled.PopUpMenu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".EndGameMenu"
+            android:name="com.androidclass.mepec_000.tiled.EndGameMenu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Timed_Extreme"
+            android:name="com.androidclass.mepec_000.tiled.Timed_Extreme"
             android:screenOrientation="portrait"></activity>
     </application>
 

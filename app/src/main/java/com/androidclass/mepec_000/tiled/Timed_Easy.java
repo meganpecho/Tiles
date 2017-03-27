@@ -1,17 +1,19 @@
-package com.androidclass.mepec_000.tiles;
+package com.androidclass.mepec_000.tiled;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.androidclass.mepec_000.tiles.R;
+
 import java.util.Random;
 
 
-public class Timed_Medium extends AppCompatActivity {
+public class Timed_Easy extends AppCompatActivity {
     Button HamburgerMenu, tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8,
                             tile9, tile10, tile11, tile12, tile13, tile14, tile15, tile16;
     static int scoreCounter;
@@ -23,9 +25,9 @@ public class Timed_Medium extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_timed_medium);
+        setContentView(R.layout.activity_timed_easy);
 
-        GameModes.current_state = "Timed_Medium";
+        GameModes.current_state = "Timed_Easy";
         millisLeft = 32000;
         scoreCounter = 0;
     }
@@ -39,17 +41,17 @@ public class Timed_Medium extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        setContentView(R.layout.activity_timed_medium);
-
-        GameModes.current_state = "Timed_Medium";
+        setContentView(R.layout.activity_timed_easy);
 
         TextView t = (TextView)findViewById(R.id.score_keeper);
         String timeStr = "";
         t.setText(timeStr.format("%d", scoreCounter));
 
+        GameModes.current_state = "Timed_Easy";
 
         if(PopUpMenu.shouldFinish) finish();
     }
+
 
     @Override
     protected void onResume() {
@@ -61,14 +63,14 @@ public class Timed_Medium extends AppCompatActivity {
                 String timeStr = "";
                 t.setText(timeStr.format("%d", (millisUntilFinished / 1000)-1));
 
-                for (int i = 0; i < 20; i++) {
+                for (int i = 0; i < 11; i++) {
                     selectTiles();
                 }
                 millisLeft = millisLeft - 1000;
             }
             public void onFinish() {
                 EndGameMenu.finalScore = scoreCounter;
-                Intent intent = new Intent(Timed_Medium.this, EndGameMenu.class);
+                Intent intent = new Intent(Timed_Easy.this, EndGameMenu.class);
                 startActivity(intent);
                 finish();
             }
@@ -96,7 +98,7 @@ public class Timed_Medium extends AppCompatActivity {
         HamburgerMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Timed_Medium.this, PopUpMenu.class);
+                Intent intent = new Intent(Timed_Easy.this, PopUpMenu.class);
                 startActivity(intent);
                 onPause();
             }
@@ -105,6 +107,7 @@ public class Timed_Medium extends AppCompatActivity {
         tile1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                v.playSoundEffect(SoundEffectConstants.CLICK);
                 if (tile1.isClickable() && tile1.isSelected()) {
                     tile1.setSelected(false);
                     addPoint();
